@@ -1,0 +1,6 @@
+dependencies {
+    implementation project(':inbound-receiving')
+}
+
+bootJar.enabled = true
+jar.enabled = false
