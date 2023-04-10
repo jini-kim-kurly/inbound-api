@@ -1,6 +1,58 @@
-dependencies {
-    implementation project(':inbound-receiving')
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.5'
 }
 
-bootJar.enabled = true
-jar.enabled = false
+apply plugin: 'io.spring.dependency-management'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+    implementation('org.springframework.boot:spring-boot-starter-web')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+//루트와 서브
+allprojects {
+    task('printProjectName').doLast {
+        println "${project.name}"
+    }
+}
+
+//루트제외한 서브만
+subprojects {
+    apply plugin : 'java-library'
+    apply plugin : 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+
+        testCompileOnly 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
+
+        implementation('org.springframework.boot:spring-boot-starter-web')
+    }
+}
+
+bootJar.enabled =false
+jar.enabled = true

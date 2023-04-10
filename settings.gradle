@@ -1,0 +1,4 @@
+rootProject.name = 'inbound-api'
+include 'inbound-external-api'
+include 'inbound-receiving'
+
