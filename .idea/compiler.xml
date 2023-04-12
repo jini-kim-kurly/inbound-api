@@ -9,8 +9,10 @@
         </processorPath>
         <module name="inbound-api.inbound-external-api.test" />
         <module name="inbound-api.main" />
-        <module name="inbound-api.inbound-external-api.main" />
         <module name="inbound-api.inbound-receiving.main" />
+        <module name="inbound-api.inbound-submodule.main" />
+        <module name="inbound-api.inbound-submodule.test" />
+        <module name="inbound-api.inbound-external-api.main" />
         <module name="inbound-api.test" />
         <module name="inbound-api.inbound-receiving.test" />
       </profile>

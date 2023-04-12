@@ -27,13 +27,6 @@ test {
     useJUnitPlatform()
 }
 
-//루트와 서브
-allprojects {
-    task('printProjectName').doLast {
-        println "${project.name}"
-    }
-}
-
 //루트제외한 서브만
 subprojects {
     apply plugin : 'java-library'

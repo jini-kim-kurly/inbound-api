@@ -1,8 +1,9 @@
 [submodule "inbound-external-api"]
 	path = inbound-external-api
 	url = https://github.com/jini-kim-kurly/inbound-external-api.git
-	branch = main
 [submodule "inbound-receiving"]
 	path = inbound-receiving
 	url = https://github.com/jini-kim-kurly/inbound-receiving.git
-	branch = main
+[submodule "inbound-submoule"]
+	path = inbound-submoule
+	url = https://github.com/jini-kim-kurly/inbound-submoule.git
